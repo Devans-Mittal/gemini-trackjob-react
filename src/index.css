@@ -1,0 +1,350 @@
+/* Layout Containers */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Feature 8: Dashboard Stats Grid */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Stat Card Styling */
+.stat-card-mini {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #e2e8f0;
+}
+
+.stat-icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+
+/* Color Coding for Stats */
+.blue .stat-icon { color: #3b82f6; background: #dbeafe; }
+.orange .stat-icon { color: #f59e0b; background: #fef3c7; }
+.green .stat-icon { color: #10b981; background: #dcfce7; }
+.red .stat-icon { color: #ef4444; background: #fee2e2; }
+
+.stat-info h4 { margin: 0; font-size: 14px; color: #64748b; }
+.stat-info p { margin: 0; font-size: 24px; font-weight: 700; }
+
+/* Recent Activity List */
+.recent-list {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* Navbar Styling */
+.navbar {
+  background: #1e293b;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: white;
+}
+
+/* Global Reset to remove that default browser gap */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+
+
+/* Form Container */
+.form-card {
+  background: white;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+/* Feature 1: The Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1.5rem;
+}
+
+/* Making notes and button take full width */
+.full-width {
+  grid-column: span 2;
+}
+
+/* Input Styling */
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  ring: 2px #3b82f6;
+}
+
+.save-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background: #2563eb;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  text-align: center;
+  color: #64748b;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 15px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  min-width: 250px;
+}
+
+/* Feature 2: Job Card Styling */
+.job-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.job-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Icons and Details row */
+.job-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Card Actions (Edit/Delete/Bookmark) */
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover { background: #fee2e2; color: #ef4444; }
+.edit-btn:hover { background: #dbeafe; color: #3b82f6; }
+.bookmark-btn.active { color: #f59e0b; }
+
+/* Bookmark specific styling */
+.bookmark-btn {
+  color: #64748b; /* Default gray */
+  transition: color 0.2s, transform 0.2s;
+}
+
+.bookmark-btn.active {
+  color: #f59e0b; /* Golden Yellow for active bookmarks */
+}
+
+.bookmark-btn:hover {
+  transform: scale(1.1);
+}
+
+.chart-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  height: 450px; 
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.chart-container h3 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  align-self: flex-start;
+}
+
+.chart-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.chart-card h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.chart-wrapper {
+  height: 350px; 
+  width: 100%;
+}
